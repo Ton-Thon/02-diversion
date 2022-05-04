@@ -14,19 +14,12 @@ namespace Kata._02_Diversion
         //5. convert i -> binary
         public List<string> GenerateBinaryListFromNumber(int number)
         {
-            List<string> binaryList = new List<string>();
-
             if (number < 1) {
-                return binaryList;
+                return new List<string>();
             }
 
-            int count = 1 << number;
-            for (int i = 0; i < count; i++)
-            {
-                binaryList.Add(Convert.ToString(i, 2).PadLeft(number, '0'));
-            }
-
-            return binaryList;
+            int n = 1 << number;
+            return  Enumerable.Range(0, n).Select(e => Convert.ToString(e, 2).PadLeft(number, '0')).ToList();
         }
 
         public int GetDiversion(List<string> binaryList)
