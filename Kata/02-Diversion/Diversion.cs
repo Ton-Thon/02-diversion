@@ -19,7 +19,7 @@ namespace Kata._02_Diversion
                 : new List<string>();
         }
 
-        public int GetDiversion(List<string> binaryList)
+        public int CountBitOneAdjacent(List<string> binaryList)
         {
             return binaryList.Count(e => !e.Contains("11"));
         }

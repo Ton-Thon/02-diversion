@@ -33,7 +33,7 @@ namespace Kata.Tests._02_Diversion
         }
 
 
-        public static IEnumerable<object[]> TestGetDiversionData()
+        public static IEnumerable<object[]> TestCountBitOneAdjacentData()
         {
             yield return new object[] { new List<string> { }, 0};
             yield return new object[] { new List<string> { "0", "1" }, 2 };
@@ -42,14 +42,14 @@ namespace Kata.Tests._02_Diversion
             yield return new object[] { new List<string> { "0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001", "1010", "1011", "1100", "1101", "1110", "1111" }, 8};
         }
         [Theory]
-        [MemberData(nameof(TestGetDiversionData))]
-        public void GetDiversionTest(List<string> binaryList, int expected)
+        [MemberData(nameof(TestCountBitOneAdjacentData))]
+        public void CountBitOneAdjacent(List<string> binaryList, int expected)
         {
             // Arrange
             var sut = new Diversion();
 
             // Act
-            var act = sut.GetDiversion(binaryList);
+            var act = sut.CountBitOneAdjacent(binaryList);
 
             // Assert
             act.Should().Be(expected);
