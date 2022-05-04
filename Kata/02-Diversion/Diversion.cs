@@ -24,7 +24,7 @@ namespace Kata._02_Diversion
 
         public int GetDiversion(List<string> binaryList)
         {
-            return binaryList.Count;
+            return 0;
         }
     }
 }
