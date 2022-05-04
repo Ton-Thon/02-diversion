@@ -13,6 +13,7 @@ namespace Kata.Tests._02_Diversion
         {
             yield return new object[] { 1, new List<string> { "0", "1" } };
             yield return new object[] { 2, new List<string> { "00", "01", "10", "11" } };
+            yield return new object[] { 2, new List<string> { "000", "001", "010", "011", "100", "101", "110", "111" } };
         }
 
         [Theory]
