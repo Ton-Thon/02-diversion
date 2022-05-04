@@ -15,8 +15,12 @@ namespace Kata._02_Diversion
         public List<string> GenerateBinaryListFromNumber(int number)
         {
             List<string> binaryList = new List<string>();
-            int count = 1 << number;
 
+            if (number < 1) {
+                return binaryList;
+            }
+
+            int count = 1 << number;
             for (int i = 0; i < count; i++)
             {
                 binaryList.Add(Convert.ToString(i, 2).PadLeft(number, '0'));
