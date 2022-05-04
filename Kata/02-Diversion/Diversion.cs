@@ -8,10 +8,12 @@ namespace Kata._02_Diversion
 {
     public class Diversion
     {
-        //1. input 4
-        //2. n = 1 << 4 (n = 16)
-        //4. generate loop i in 0 - n
-        //5. convert i -> binary
+
+        public int GetDiversion(int number)
+        {
+            return 0;
+        }
+        
         public List<string> GenerateBinaryListFromNumber(int number)
         {
             return number > 0

@@ -54,5 +54,28 @@ namespace Kata.Tests._02_Diversion
             // Assert
             act.Should().Be(expected);
         }
+
+
+        public static IEnumerable<object[]> TestGetDiversionData()
+        {
+            yield return new object[] { 1, 2 };
+            yield return new object[] { 2, 3 };
+            yield return new object[] { 3, 5 };
+            yield return new object[] { 4, 8 };
+        }
+
+        [Theory]
+        [MemberData(nameof(TestGetDiversionData))]
+        public void GetDiversionTest(int number, int expected)
+        {
+            // Arrange
+            var sut = new Diversion();
+
+            // Act
+            var act = sut.GetDiversion(number);
+
+            // Assert
+            act.Should().Be(expected);
+        }
     }
 }
