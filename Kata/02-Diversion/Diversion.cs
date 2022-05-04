@@ -8,6 +8,11 @@ namespace Kata._02_Diversion
 {
     public class Diversion
     {
+        //1. input 4
+        //2. 4 -> 1111
+        //3. 1111 -> 15
+        //4. generate loop i in 0 - 15
+        //5. convert i -> binary
         public List<string> GenerateBinaryListFromNumber(int number)
         {
             if (number == 2)
