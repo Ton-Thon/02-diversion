@@ -12,6 +12,7 @@ namespace Kata.Tests._02_Diversion
         public static IEnumerable<object[]> TestGenerateBinaryListFromNumberData()
         {
             yield return new object[] { 1, new List<string> { "0", "1" } };
+            yield return new object[] { 2, new List<string> { "00", "01", "10", "11" } };
         }
 
         [Theory]
