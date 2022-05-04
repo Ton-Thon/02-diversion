@@ -11,7 +11,9 @@ namespace Kata._02_Diversion
 
         public int GetDiversion(int number)
         {
-            return 0;
+            List<string> binaryList = GenerateBinaryListFromNumber(number);
+            int result = CountBitOneAdjacent(binaryList);
+            return result;
         }
         
         public List<string> GenerateBinaryListFromNumber(int number)
