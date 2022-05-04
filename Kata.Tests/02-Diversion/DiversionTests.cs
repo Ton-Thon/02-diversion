@@ -58,6 +58,7 @@ namespace Kata.Tests._02_Diversion
 
         public static IEnumerable<object[]> TestGetDiversionData()
         {
+            yield return new object[] { 0, 0 };
             yield return new object[] { 1, 2 };
             yield return new object[] { 2, 3 };
             yield return new object[] { 3, 5 };
