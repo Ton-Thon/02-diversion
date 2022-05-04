@@ -9,12 +9,13 @@ namespace Kata._02_Diversion
     public class Diversion
     {
         //1. input 4
-        //2. 2 pow 4 -> 16
-        //4. generate loop i in 0 - 16
+        //2. n = 1 << 4 (n = 16)
+        //4. generate loop i in 0 - n
         //5. convert i -> binary
         public List<string> GenerateBinaryListFromNumber(int number)
         {
-            
+            int count = 1 << number;
+
 
             return new List<string> { "0", "1" };
         }
