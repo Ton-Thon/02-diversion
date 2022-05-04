@@ -24,19 +24,7 @@ namespace Kata._02_Diversion
 
         public int GetDiversion(List<string> binaryList)
         {
-            int count = binaryList.Count;
-            foreach (var binary in binaryList) {
-                for (int i = 0; i < binary.Length - 1; i++)
-                {
-                    if(binary[i] == '1' && binary[i] == binary[i + 1])
-                    {
-                        count -= 1;
-                        break;
-                    }
-                }
-            }
-
-            return count;
+            return binaryList.Count(e => !e.Contains("11"));
         }
     }
 }
