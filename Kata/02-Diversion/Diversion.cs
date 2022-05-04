@@ -19,22 +19,24 @@ namespace Kata._02_Diversion
             }
 
             int n = 1 << number;
-            return  Enumerable.Range(0, n).Select(e => Convert.ToString(e, 2).PadLeft(number, '0')).ToList();
+            return Enumerable.Range(0, n).Select(e => Convert.ToString(e, 2).PadLeft(number, '0')).ToList();
         }
 
         public int GetDiversion(List<string> binaryList)
         {
-            if (binaryList.Contains("0011") && binaryList.Contains("0110") && binaryList.Contains("0111"))
-                return 8;
+            int count = binaryList.Count;
+            foreach (var binary in binaryList) {
+                for (int i = 0; i < binary.Length - 1; i++)
+                {
+                    if(binary[i] == '1' && binary[i] == binary[i + 1])
+                    {
+                        count -= 1;
+                        break;
+                    }
+                }
+            }
 
-            if (binaryList.Contains("011") && binaryList.Contains("110") && binaryList.Contains("111"))
-                return 5;
-
-
-            if (binaryList.Contains("11"))
-                return 3;
-
-            return 2;
+            return count;
         }
     }
 }
