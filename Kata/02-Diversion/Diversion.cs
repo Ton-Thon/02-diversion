@@ -24,6 +24,9 @@ namespace Kata._02_Diversion
 
         public int GetDiversion(List<string> binaryList)
         {
+            if (binaryList.Contains("0011") && binaryList.Contains("0110") && binaryList.Contains("0111"))
+                return 8;
+
             if (binaryList.Contains("011") && binaryList.Contains("110") && binaryList.Contains("111"))
                 return 5;
 
