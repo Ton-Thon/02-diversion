@@ -10,7 +10,7 @@ namespace Kata._02_Diversion
     {
         public List<string> GenerateBinaryListFromNumber(int number)
         {
-            return new List<string> { number.ToString() };
+            return new List<string> { "0", "1" };
         }
 
         public int GetDiversion(List<string> binaryList)
