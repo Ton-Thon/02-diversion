@@ -13,6 +13,10 @@ namespace Kata._02_Diversion
             if (number == 2)
                 return new List<string> { "00", "01", "10", "11" };
 
+            if (number == 3)
+                return new List<string> { "000", "001", "010", "011", "100", "101", "110", "111" };
+
+
             return new List<string> { "0", "1" };
         }
 
