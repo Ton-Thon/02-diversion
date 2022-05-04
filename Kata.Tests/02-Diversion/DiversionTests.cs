@@ -28,5 +28,6 @@ namespace Kata.Tests._02_Diversion
             // Assert
             act.Should().Equal(expected);
         }
+
     }
 }
