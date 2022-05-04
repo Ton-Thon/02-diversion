@@ -36,6 +36,7 @@ namespace Kata.Tests._02_Diversion
         public static IEnumerable<object[]> TestGetDiversionData()
         {
             yield return new object[] { new List<string> { "0", "1" }, 2 };
+            yield return new object[] { new List<string> { "00", "01", "10", "11" }, 3 };
         }
         [Theory]
         [MemberData(nameof(TestGetDiversionData))]
